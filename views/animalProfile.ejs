@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animal Profile</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>All Animals</h1>
+    <ul>
+        <% animals.forEach(function(animal){ %>
+            <li>
+                
+                
+                
+                <%= animal.breed %>
+
+                <% if (animal.color == "Tan") { %>
+                    <img src="https://zachwellerbucket.s3.amazonaws.com/tanSiamese.jpg" />
+                     <span style="color:tan">                        
+                        <%= " color: " + animal.color %>
+                    </span> 
+                <% } else if (animal.color == "Grey") { %>
+                    <span style="color:grey"> 
+                        <img src="https://zachwellerbucket.s3.amazonaws.com/greyHusky.jpg" />
+                        <%= " color: " + animal.color %>
+                    </span> 
+                <% } else { %>
+                    <span style="color:white">
+                        <img src="https://zachwellerbucket.s3.amazonaws.com/roe+jogan.webp" />
+                        <%= " color: " + animal.color %>
+                    </span> 
+                <% } %>     
+            </li>
+            
+       <% }); %>
+    </ul>
+
+  </body>
+</html>
